@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+    <!-- css files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="css/fontawesome-all.css" rel="stylesheet" /><!-- fontawesome css -->
+    <!-- //css files -->
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800&amp;subset=devanagari,latin-ext" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Niramit:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+    <!-- //google fonts -->
+
+</head>
+
+<body>
+<!-- header -->
+<header class="bg-white py-1">
+    <nav class="navigation">
+        <div class="toggle">
+            <i class="fa fa-bars haoke" aria-hidden="true"></i>
+        </div>
+        <div class="imageShow" style="position: absolute;z-index: 100;left: 10%;top: 8%;">
+            <img src="images/about2.png" />
+        </div>
+        <ul class="navigation_ul">
+            <span style="margin-left: 15%"></span>
+            <li class="ul-item"><a href="contact.html">关于我们</a></li>
+            <li class="ul-item"><a href="standard-query.html">标准查询</a></li>
+            <li class="ul-item"><a href="registration.html">考生报名</a></li>
+            <li class="ul-item"><a href="grade-query.html">成绩查询</a></li>
+            <li class="ul-item"><a href="faq.html">常见问题</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- //header -->
+
+<div style="background: url(images/background2.jpg) no-repeat;background-size:100% 110%;" class="row">
+    <div class="col-md-4    ">
+        <div class="checkinfo-container">
+            <p class="font-weight-bold">您的考号：</p>
+            <p class="font-weight-bold"></p>
+        </div>
+    </div>
+    <div style="text-align: center;margin-top: 3%;" class="form-container col-md-7">
+        <div class="container-in">
+            <h2 style="padding-top: 6%">群  星  体  考  报  名</h2>
+            <br />
+            <form method="post" action="php/stu-reg.php">
+                <div class="form-group row">
+                    <div class="col-sm-1"></div>
+                    <label for="truename" class="col-sm-2 col-form-label">Name:</label>
+                    <div class="col-sm-8    ">
+                        <input type="text" name="truename" class="form-control" id="truename" placeholder="Enter Your Name">
+                    </div>
+                    <div class="col-sm-1"><label for="truename" id="checkinfo2"></label></div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <legend class="col-form-label col-sm-2 pt-0">Sex:</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sex" id="sex-male" value="male">
+                                <label class="form-check-label" for="sex-male">
+                                    Male
+                                </label>
+                                <input style="margin-left: 12%;" name="sex" class="form-check-input" type="radio" name="sex" id="sex-female" value="female">
+                                <label style="margin-left: 16%;" class="form-check-label" for="sex-female">
+                                    Female
+                                </label>
+                                <p id="checkinfo4" style="margin-left: 5%;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="col-sm-1"></div>
+                    <label for="idnum" class="col-sm-2 col-form-label">Paper No:</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="paper_no" id="idnum" placeholder="Enter Your Paper Id">
+                    </div>
+                    <div class="col-sm-1"><label for="idnum" id="checkinfo1"></label></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-1"></div>
+                    <label for="tel" class="col-sm-2 col-form-label">Telephone:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="tel" class="form-control" id="tel" placeholder="Enter Your Phone Num">
+                    </div>
+                    <div class="col-sm-1"><label for="tel" id="checkinfo3"></label></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-1"></div>
+                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-8">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="col-sm-1"><label for="email" id="checkinfo5"></label></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-1"></div>
+                    <label for="school" class="col-sm-2 col-form-label">School:</label>
+                    <div class="col-sm-8">
+                        <select id="school" name="school" class="custom-select">
+                            <option selected>School</option>
+                            <option value="上海海事大学">上海海事大学</option>
+                            <option value="上海海洋大学">上海海洋大学</option>
+                            <option value="上海大学">上海大学</option>
+                            <option value="同济大学">同济大学</option>
+                            <option value="复旦大学">复旦大学</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1"><label for="school" id="checkinfo6"></label></div>
+                </div>
+                <div style="text-align: center;" class="form-group row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <button type="button" name="reg_submit" class="btn btn-info" id="form-submit">Regisiter</button>
+                    </div>
+                </div>
+                <p id="checkinfo" style="text-align:center;font-size:17px;"></p>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<script src="js/nav.js" type="text/javascript"></script>
+<script src="js/function.js" type="text/javascript"></script>
+</body>
+</html>
